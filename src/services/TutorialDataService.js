@@ -19,17 +19,10 @@ class TutorialDataService {
   }
 
   delete(id) {
-    //console.log(id); return;
+    
     return http.delete(`/delete.php`,{data:{id}});
   }
 
-  //deleteAll() {
-  //  return http.delete(`/tutorials`);
-  //}
-
-  //findByTitle(title) {
-   // return http.get(`/tutorials?title=${title}`);
- // }
 }
 
 export default new TutorialDataService();

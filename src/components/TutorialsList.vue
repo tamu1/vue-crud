@@ -87,7 +87,7 @@ export default {
     retrieveTutorials() {
       TutorialDataService.getAll()
         .then(response => {
-          //console.log(response);
+          
           this.tutorials = response.data.body;
           console.log(response.data);
         })
@@ -128,16 +128,16 @@ export default {
         });
     },
    deleteTutorial(id) {
-     const isSure = confirm("Are you sure?");
+     const isSure = confirm("Are you sure you want to delete?");
      if(isSure){
       TutorialDataService.delete(id)
         .then(response => {
           if(response){
             this.refreshList();
           }
-          //this.tutorials = response.data;
-          //console.log(response.data);
-        })
+
+
+ })
         .catch(e => {
           console.log(e);
         });
@@ -145,11 +145,7 @@ export default {
        console.log("unsure to delete");
      }
   }, 
- // },
- // mounted() {
- //   this.retrieveTutorials();
- // }
-//};
+ 
  updateTutorial(id) {
     this.$router.push(`/edit/${id}`);
   }, 
