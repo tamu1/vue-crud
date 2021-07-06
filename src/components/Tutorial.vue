@@ -94,6 +94,7 @@ export default {
           console.log(e);
         });
     },
+    
 
     updateTutorial() {
       TutorialDataService.update(this.currentTutorial.id, this.currentTutorial)
